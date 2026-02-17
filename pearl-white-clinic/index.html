@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pearl White | Premier Dental Clinic India</title>
+    <meta name="description" content="Experience premium dental care at Pearl White. Book your appointment online today.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <i class="fa-solid fa-tooth"></i> Pearl White
+            </a>
+            
+            <!-- Glass Pill Menu (Centered) -->
+            <div class="nav-glass-container">
+                <a href="#home" class="nav-link-item">Home</a>
+                <a href="#about" class="nav-link-item">About</a>
+                <a href="#services" class="nav-link-item">Services</a>
+                <a href="#gallery" class="nav-link-item">Gallery</a>
+                <a href="#testimonials" class="nav-link-item">Reviews</a>
+            </div>
+
+            <div class="nav-actions">
+                <a href="#home" class="btn btn-primary">CALL NOW</a>
+                <!-- Hamburger Icon (Right of Button) -->
+                <button class="mobile-menu-btn"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </div>
+        <!-- Mobile Menu (Glass Style) -->
+        <div class="mobile-menu">
+            <a href="#home" class="mobile-link">Home</a>
+            <a href="#about" class="mobile-link">About</a>
+            <a href="#services" class="mobile-link">Services</a>
+            <a href="#gallery" class="mobile-link">Gallery</a>
+        </div>
+    </nav>
+
+    <!-- Split Hero Section -->
+    <div id="home" class="hero-section">
+        <!-- Text Left -->
+        <div class="hero-left">
+            <div class="hero-content-wrapper">
+                <h1>World-Class Dental Care in <span style="color: var(--accent);">India</span></h1>
+                <p>Advanced dentistry with international standards. Experience pain-free treatments in the heart of Mumbai.</p>
+                
+                <div class="hero-features">
+                    <div class="feature-item">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <span>Safe & Sterile</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fa-solid fa-user-doctor"></i>
+                        <span>Expert Doctors</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fa-solid fa-star" style="color: #F59E0B;"></i>
+                        <span>4.9/5 Rating</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Image & Widget Right -->
+        <div class="hero-right">
+            <div class="booking-card">
+                <div class="card-title">Book Appointment</div>
+                <div class="card-subtitle">Select a date to check availability</div>
+                
+                <div id="calendar-view">
+                    <div class="calendar-nav">
+                        <button id="prevMonth" class="cal-btn"><i class="fa-solid fa-chevron-left"></i></button>
+                        <span id="currentMonthDisplay" class="current-month">Month Year</span>
+                        <button id="nextMonth" class="cal-btn"><i class="fa-solid fa-chevron-right"></i></button>
+                    </div>
+                    
+                    <div class="cal-grid">
+                        <div class="cal-head">Su</div>
+                        <div class="cal-head">Mo</div>
+                        <div class="cal-head">Tu</div>
+                        <div class="cal-head">We</div>
+                        <div class="cal-head">Th</div>
+                        <div class="cal-head">Fr</div>
+                        <div class="cal-head">Sa</div>
+                    </div>
+                    <div id="calendarDays" class="cal-grid" style="margin-top: 0.5rem;">
+                        <!-- JS Injected -->
+                    </div>
+                </div>
+
+                <div id="time-view" class="hidden" style="margin-top: 1.5rem;">
+                    <button id="backToCal" class="btn btn-outline" style="font-size: 0.8rem; padding: 0.25rem 0.5rem; margin-bottom: 1rem;">&larr; Back</button>
+                    <h5 style="margin-bottom: 0.75rem;">Available Slots</h5>
+                    <div id="timeSlots" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.5rem;"></div>
+                </div>
+
+                <div id="form-view" class="hidden" style="margin-top: 1.5rem;">
+                    <form id="bookForm">
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required style="width: 100%; padding: 0.75rem; border: 1px solid #e2e8f0; border-radius: 8px; margin-bottom: 0.75rem; background: #f8fafc;">
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" placeholder="Phone Number" required style="width: 100%; padding: 0.75rem; border: 1px solid #e2e8f0; border-radius: 8px; margin-bottom: 1.25rem; background: #f8fafc;">
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Confirm Booking</button>
+                    </form>
+                </div>
+                
+                <div id="success-view" class="hidden text-center" style="padding: 1rem 0;">
+                    <div style="width: 64px; height: 64px; background: #DEF7EC; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+                        <i class="fa-solid fa-check" style="color: #059669; font-size: 1.5rem;"></i>
+                    </div>
+                    <h4>Confirmed!</h4>
+                    <p style="font-size: 0.9rem; color: #64748b; margin-bottom: 1rem;">We'll see you soon.</p>
+                    <button onclick="location.reload()" class="btn btn-outline" style="margin-top: 0.5rem;">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="section bg-white">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 5rem; align-items: center;">
+                <div>
+                    <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=800" style="border-radius: 20px; box-shadow: var(--shadow-float);" alt="Clinic Interior">
+                </div>
+                <div>
+                    <span style="color: var(--accent); font-weight: 700; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">About Us</span>
+                    <h2 style="font-size: 2.75rem; margin-bottom: 1.5rem; margin-top: 0.5rem;">Modern Dentistry, <br>Human Touch</h2>
+                    <p style="margin-bottom: 1.5rem; font-size: 1.1rem;">At Pearl White India, we combine state-of-the-art technology with traditional Indian hospitality. Our clinic in Mumbai is equipped with the latest OPG machines, sterile operatories, and a relaxing ambience.</p>
+                    <ul style="list-style: none; margin-bottom: 2rem; color: var(--text-body);">
+                        <li style="margin-bottom: 0.75rem; display: flex; align-items: center;"><i class="fa-solid fa-circle-check" style="color: var(--accent-green); margin-right: 0.75rem; font-size: 1.1rem;"></i> ISO 9001:2015 Certified Clinic</li>
+                        <li style="margin-bottom: 0.75rem; display: flex; align-items: center;"><i class="fa-solid fa-circle-check" style="color: var(--accent-green); margin-right: 0.75rem; font-size: 1.1rem;"></i> Painless Laser Treatments</li>
+                        <li style="margin-bottom: 0.75rem; display: flex; align-items: center;"><i class="fa-solid fa-circle-check" style="color: var(--accent-green); margin-right: 0.75rem; font-size: 1.1rem;"></i> 24/7 Emergency Support</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="section bg-light">
+        <div class="container">
+            <div class="text-center" style="max-width: 600px; margin: 0 auto 3rem;">
+                <span style="color: var(--accent); font-weight: 700; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Our Expertise</span>
+                <h2 style="margin-top: 0.5rem;">Specialized Treatments</h2>
+                <p>Comprehensive oral care under one roof with advanced technology.</p>
+            </div>
+            
+            <!-- Expanded Services Grid (12 Items) -->
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                    <div class="service-info"><h3>Cosmetic Dentistry</h3></div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-crown"></i></div>
+                    <div class="service-info"><h3>Crowns & Bridges</h3></div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-teeth"></i></div>
+                    <div class="service-info"><h3>Dental Implants</h3></div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-teeth-open"></i></div>
+                    <div class="service-info"><h3>Dentures</h3></div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-kit-medical"></i></div>
+                    <div class="service-info"><h3>Emergency Dental Care</h3></div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-user-doctor"></i></div>
+                    <div class="service-info"><h3>Oral Surgery</h3></div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-arrows-left-right-to-line"></i></div>
+                    <div class="service-info"><h3>Orthodontics</h3></div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-child"></i></div>
+                    <div class="service-info"><h3>Pediatric Dentistry</h3></div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-hand-holding-droplet"></i></div>
+                    <div class="service-info"><h3>Periodontics</h3></div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-shield-heart"></i></div>
+                    <div class="service-info"><h3>Preventative Care</h3></div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-bolt"></i></div>
+                    <div class="service-info"><h3>Root Canal Treatment</h3></div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-star"></i></div>
+                    <div class="service-info"><h3>Teeth Whitening</h3></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Doctor Section -->
+    <section id="doctor" class="section bg-white">
+        <div class="container doctor-grid">
+            <div class="doctor-img-wrap">
+                <img src="https://images.unsplash.com/photo-1614608682850-e0d6ed316d47?auto=format&fit=crop&q=80&w=800" alt="Dr. Anjali Sharma" class="doctor-profile-img">
+            </div>
+            <!-- Doctor Details on the Right (enforced by Grid logic) -->
+            <div class="doctor-details">
+                <span style="color: var(--accent); font-weight: 700; letter-spacing: 1px;">HEAD DENTIST</span>
+                <h2 style="font-size: 2.75rem; margin-bottom: 0.5rem;">Dr. Anjali Sharma</h2>
+                <span style="display: block; margin-bottom: 1.5rem; color: #64748b; font-size: 1.1rem;">BDS, MDS - Prosthodontics</span>
+                <p style="margin-bottom: 1.5rem; font-size: 1.1rem;">With over 15 years of clinical experience, Dr. Anjali Sharma is renowned for her precision in cosmetic dentistry and full-mouth rehabilitation. She is a gold medalist from Mumbai University.</p>
+                <div style="display: flex; gap: 3rem; margin-top: 2rem; border-top: 1px solid #e2e8f0; padding-top: 2rem;">
+                    <div>
+                        <h4 style="font-size: 2.5rem; color: var(--primary); line-height: 1;">15+</h4>
+                        <p style="font-size: 0.9rem; margin-top: 0.5rem;">Years Exp.</p>
+                    </div>
+                    <div>
+                        <h4 style="font-size: 2.5rem; color: var(--primary); line-height: 1;">5k+</h4>
+                        <p style="font-size: 0.9rem; margin-top: 0.5rem;">Happy Smiles</p>
+                    </div>
+                     <div>
+                        <h4 style="font-size: 2.5rem; color: var(--primary); line-height: 1;">20+</h4>
+                        <p style="font-size: 0.9rem; margin-top: 0.5rem;">Awards</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery" class="section bg-light">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: 4rem;">
+                <span style="color: var(--accent); font-weight: 700; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Tour</span>
+                <h2 style="margin-top: 0.5rem;">Clinic Gallery</h2>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=800" alt="Interior"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=800" alt="Exterior"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=800" alt="Waiting"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container" style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 3rem;">
+            <div style="flex: 1; min-width: 250px;">
+                <h4 style="margin-bottom: 1.5rem; font-size: 1.5rem;">Pearl White</h4>
+                <p style="color: #e2e8f0; line-height: 1.8;">Building healthy smiles across India since 2010. We are committed to providing world-class dental care with a gentle touch.</p>
+            </div>
+            <div style="flex: 1; min-width: 250px;">
+                <h4 style="margin-bottom: 1.5rem;">Contact Us</h4>
+                <p style="margin-bottom: 0.5rem; color: #e2e8f0;"><i class="fa-solid fa-phone" style="margin-right: 0.5rem;"></i> +91 98765 43210</p>
+                <p style="margin-bottom: 0.5rem; color: #e2e8f0;"><i class="fa-solid fa-envelope" style="margin-right: 0.5rem;"></i> care@pearlwhite.in</p>
+                <p style="margin-bottom: 0.5rem; color: #e2e8f0;"><i class="fa-solid fa-location-dot" style="margin-right: 0.5rem;"></i> Bandra West, Mumbai 400050</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2024 Pearl White Dental Clinic. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+</body>
+</html>

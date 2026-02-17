@@ -1,0 +1,1 @@
+// Logic moved to index.html to ensure it loads correctly in all preview environments.
