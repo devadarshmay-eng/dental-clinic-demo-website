@@ -2,6 +2,10 @@
 
 A modern, responsive website for **Pearl White**, a premier dental clinic based in India. This project showcases the clinic's services, doctors, and facilities, and features an interactive appointment booking system.
 
+## Live Demo
+
+- Website: https://devadarshmay-eng.github.io/dental-clinic-demo-website/
+
 ## Features
 
 *   **Responsive Design:** Fully responsive layout that works beautifully on desktops, tablets, and mobile devices.
@@ -41,7 +45,7 @@ This repository includes a workflow at `.github/workflows/deploy-pages.yml` to p
 1. Push changes to the `main` branch.
 2. In GitHub, open **Settings → Pages** and ensure **Build and deployment** is set to **GitHub Actions**.
 3. After the workflow completes, your site will be available at:
-   `https://<your-github-username>.github.io/dental-clinic-demo-website/`
+   `https://devadarshmay-eng.github.io/dental-clinic-demo-website/`
 
 ## License
 
