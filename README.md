@@ -30,8 +30,12 @@ A modern, responsive website for **Pearl White**, a premier dental clinic based 
 
 ## Setup
 
-1.  Clone the repository.
-2.  Open `index.html` in your web browser.
+1. Clone the repository.
+2. Install dependencies with `npm ci`.
+3. Start the local preview with `npm run dev`.
+4. Create a production build with `npm run build`.
+
+The Vite build uses `pearl-white-clinic/` as its site root, so the generated `dist/` folder is ready to publish as a static site. A GitHub Actions workflow in `.github/workflows/deploy-pages.yml` deploys every push to `main` to GitHub Pages. In the repository settings, set **Pages → Build and deployment → Source** to **GitHub Actions**.
 
 ## License
 
